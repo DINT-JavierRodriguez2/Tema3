@@ -1,0 +1,47 @@
+﻿<Window x:Class="Tema3_EquiposNBA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_EquiposNBA"
+        mc:Ignorable="d"
+        Title="Equipos NBA" Height="380" Width="800">
+    <StackPanel>
+        <Border Margin="8" BorderBrush="Black" BorderThickness="3" CornerRadius="3">
+            <StackPanel>
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFB250E2"/>
+                        <GradientStop Color="#FFE5ED46" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Text="Los Ángeles Lakers" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" TextWrapping="Wrap" />
+                <WrapPanel HorizontalAlignment="Center">
+                    <Image  Source="/Resources/23_lakers.png"  Width="150" />
+                    <Image  Source="/Resources/14_lakers.png"  Width="150" />
+                    <Image  Source="/Resources/3_lakers.png"  Width="150" />
+                    <Image  Source="/Resources/39_lakers.png"  Width="150" />
+                    <Image  Source="/Resources/9_lakers.png"  Width="150" />
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+        <Border Margin="8" BorderBrush="Black" BorderThickness="3" CornerRadius="3">
+            <StackPanel >
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFF11C06" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Text="Maiami Heat" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FFF9F9F9" TextWrapping="Wrap" />
+                <WrapPanel HorizontalAlignment="Center">
+                    <Image  Source="/Resources/13_heat.png"  Width="150" />
+                    <Image  Source="/Resources/14_heat.png"  Width="150" />
+                    <Image  Source="/Resources/22_heat.png"  Width="150" />
+                    <Image  Source="/Resources/7_heat.png"  Width="150" />
+                    <Image  Source="/Resources/99_heat.png"  Width="150" />
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Window>
