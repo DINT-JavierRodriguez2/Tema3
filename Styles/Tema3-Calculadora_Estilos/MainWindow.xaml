@@ -1,0 +1,86 @@
+﻿<Window x:Class="Tema3_Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_Calculadora"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="500" Width="450" MinHeight="350" MinWidth="250">
+    <Window.Resources>
+        <!-- Estilos para Button -->
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="7"/>
+            <EventSetter Event="Click" Handler="Button_Click"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="5">
+            <Viewbox HorizontalAlignment="Right">
+                <TextBlock x:Name="pantalla"></TextBlock>
+            </Viewbox>
+        </Border>
+        <Button x:Name="unoButton" Tag="1" Grid.Row="2" Grid.Column="0">
+            <Viewbox>
+                <TextBlock>1</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="dosButton" Tag="2" Grid.Row="2" Grid.Column="1">
+            <Viewbox>
+                <TextBlock>2</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="tresButton" Tag="3" Grid.Row="2" Grid.Column="2">
+            <Viewbox>
+                <TextBlock>3</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="cuatroButton" Tag="4" Grid.Row="3" Grid.Column="0">
+            <Viewbox>
+                <TextBlock>4</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="cincoButton" Tag="5" Grid.Row="3" Grid.Column="1">
+            <Viewbox>
+                <TextBlock>5</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="seisButton" Tag="6" Grid.Row="3" Grid.Column="2">
+            <Viewbox>
+                <TextBlock>6</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="sieteButton" Tag="7" Grid.Row="4" Grid.Column="0">
+            <Viewbox>
+                <TextBlock>7</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="ochoButton" Tag="8" Grid.Row="4" Grid.Column="1">
+            <Viewbox>
+                <TextBlock>8</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button x:Name="nueveButton" Tag="9" Grid.Row="4" Grid.Column="2">
+            <Viewbox>
+                <TextBlock>9</TextBlock>
+            </Viewbox>
+        </Button>
+        <Button Tag="0" Grid.Row="5" Grid.ColumnSpan="3">
+            <Viewbox>
+                <TextBlock>0</TextBlock>
+            </Viewbox>
+        </Button>
+    </Grid>
+</Window>

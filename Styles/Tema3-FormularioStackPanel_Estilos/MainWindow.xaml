@@ -1,0 +1,66 @@
+﻿<Window x:Class="Tema3_FormularioStackPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema3_FormularioStackPanel"
+        mc:Ignorable="d"
+        Title="Formulario StackPanel" Height="300" Width="800" MinWidth="200" MaxWidth="800">
+    <Window.Resources>
+        <!-- Estilo para StackPanel -->
+        <Style TargetType="{x:Type StackPanel}" x:Key="Campos">
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Height" Value="60"/>
+        </Style>
+        <!-- Estilo para Label -->
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="MaxWidth" Value="800"/>
+            <Setter Property="MinWidth" Value="800"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <!-- Estilo para Button -->
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Width" Value="100"/>
+        </Style>
+
+    </Window.Resources>
+    <StackPanel>
+        <StackPanel Style="{StaticResource Campos}">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D851"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Content="Nombre"/>
+            <TextBox></TextBox>
+        </StackPanel>
+        <StackPanel Style="{StaticResource Campos}">            
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7072E2"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+            <Label Content="Dirección"/>
+            <TextBox ></TextBox>
+        </StackPanel>
+        <StackPanel Style="{StaticResource Campos}">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE270C3"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Content="Correo electrónico"/>
+            <TextBox HorizontalAlignment="Left" MaxWidth="800" MinWidth="500"></TextBox>            
+        </StackPanel>
+        <StackPanel  Margin="8" DockPanel.Dock="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Content="Aceptar" />
+                <Button Content="Cancelar" />            
+        </StackPanel>
+    </StackPanel>
+</Window>
